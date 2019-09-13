@@ -1,0 +1,7 @@
+runCIPipeline(application: env.APP_NAME,
+              devProject: "genexus-dev",
+              agent: "nodejs",
+              compileCommands: "curl -u admin:admin123 --create-dirs -o ./openshift/wars/genexus.war http://10.10.103.100:8081/repository/maven-releases/com/salud/genexus/1.0.0/genexus-1.0.0.war",
+              testCommands: "",
+              artifactsDir: "./openshift",
+              applicationTemplate: "./openshift/template.yaml")
