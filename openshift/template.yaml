@@ -27,8 +27,8 @@ objects:
     resources: {}
     runPolicy: Serial
     source:
-    binary: {}
-    type: Binary
+      type: Binary
+      binary: {}
     triggers: 
       - type: "ConfigChange"
 - apiVersion: v1
