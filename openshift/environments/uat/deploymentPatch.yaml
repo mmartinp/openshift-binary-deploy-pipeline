@@ -3,7 +3,7 @@ spec:
   template:
     spec:
       containers:
-      - name: genexus-uat
+      - name: genexus
         resources:
           limits:
             memory: 512Mi

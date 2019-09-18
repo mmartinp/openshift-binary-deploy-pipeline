@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Template
 metadata:
-  name: genexus-dev
+  name: genexus
 objects:
 parameters:
 - description: Application Name
   displayName: Application Name
   name: APP_NAME
   required: true
-  value: genexus-dev
+  value: genexus

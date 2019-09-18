@@ -3,7 +3,7 @@ spec:
   template:
     spec:
       containers:
-      - name: genexus-dev
+      - name: genexus
         resources:
           limits:
             memory: 1024Mi
