@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Template
 metadata:
-  name: genexus-dev
+  name: genexus
   annotations:
     openshift.io/display-name: Genexus
     iconClass: fa fa-code
@@ -103,7 +103,7 @@ parameters:
   displayName: Application Name
   name: APP_NAME
   required: true
-  value: genexus-dev
+  value: genexus
 - description: Git Repository
   displayName: Git Repository
   name: GIT_REPO
