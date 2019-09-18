@@ -50,10 +50,9 @@ oc adm policy add-role-to-user edit system:serviceaccount:jenkins:jenkins -n gen
 oc create -f ./templates/ci-pipeline.yaml -n genexus-dev
 oc create -f ./templates/cd-pipeline.yaml -n genexus-dev
 
-oc new-app --template ci-pipeline -p APP_NAME=genexus -p GIT_REPO=ssh://git@github.com/juanchiriera/openshift-binary-deploy-pipeline.git -p GIT_BRANCH=master -n genexus-dev
+oc new-app --template cd-pipeline -p APP_NAME=genexus -p GIT_REPO=ssh://git@github.com/mmartinp/openshift-binary-deploy-pipeline.git -p GIT_BRANCH=master -n genexus-dev
 
-oc new-app --template cd-pipeline -p APP_NAME=genexus -p GIT_REPO=ssh://git@github.com/juanchiriera/openshift-binary-deploy-pipeline.git -p GIT_BRANCH=master -n genexus-dev
-
+git@github.com:mmartinp/openshift-binary-deploy-pipeline.git
 ```
 
 >To get the base project top build .war file, use [this repo](https://github.com/jboss-openshift/openshift-quickstarts/tree/master/tomcat-jdbc).
