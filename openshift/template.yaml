@@ -122,6 +122,11 @@ parameters:
   description: Environment
   required: true
   value: salud
+- name: IMAGE_NAME
+  displayName: Image Base Name
+  description: Image Base Name
+  required: true
+  value: jboss-webserver31-tomcat8-openshift
 - name: IMAGE_VERSION
   displayName: Image Base Version
   description: Image Base Version
