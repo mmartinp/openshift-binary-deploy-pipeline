@@ -19,18 +19,21 @@ objects:
       app: ${APP_NAME}
     name: ${APP_NAME}
   spec:
+    triggers:
+    - type: "ConfigChange"
     output:
       to:
         kind: ImageStreamTag
         name: ${APP_NAME}:latest
-    postCommit: {}
-    resources: {}
-    runPolicy: Serial
     source:
       type: Binary
-      binary: {}
-    triggers: 
-      - type: "ConfigChange"
+    strategy:
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: ${IMAGE_NAME}:${IMAGE_VERSION}
+          namespace: openshift
+      type: Source
 - apiVersion: v1
   kind: DeploymentConfig
   metadata:
